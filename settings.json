@@ -1,0 +1,90 @@
+{
+  "theme": "Catppuccin Mocha",
+  "buffer_font_family": "Cascadia Code",
+  "icon_theme": "Catppuccin Mocha",
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "outline_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "version": "1",
+    "button": false,
+    "enabled": false
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    },
+    "cargo": null
+  },
+  "languages": {
+    "Go": {
+      "language_servers": ["gopls"]
+      // "format_on_save": {
+      //   "external": {
+      //     "command": "gci",
+      //     "arguments": [
+      //       "print", // Output formatted code to stdout
+      //       "--skip-generated",
+      //       "-s",
+      //       "standard",
+      //       "-s",
+      //       "localmodule",
+      //       "-s",
+      //       "prefix(gitlab.rutube.ru)",
+      //       "-s",
+      //       "default",
+      //       "--custom-order",
+      //       "--path",
+      //       "{buffer_path}" // Provide directory for module resolution
+      //     ]
+      //   }
+      // }
+    }
+  },
+  
+  "wrap_guides": [100, 150],
+  "lsp": {
+    "golangci-lint": {
+      "initialization_options": {
+        "command": [
+          "golangci-lint",
+          "run",
+          "--out-format",
+          "json",
+          "--issues-exit-code=1"
+        ]
+      }
+    },
+    "gopls": {
+      "gofumpt": true,
+      "initialization_options": {
+        "buildFlags": ["-tags=integration"],
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        },
+        "gofumpt": true,
+        "symbolScope": "workspace",
+        "staticcheck": true,
+        "vulncheck": "Imports",
+        "codelenses": {
+          "gc_details": true,
+          "run_govulncheck": true
+        }
+      }
+    }
+  }
+}
