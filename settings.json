@@ -1,5 +1,34 @@
 {
+  "theme": "Nordfox - blurred",
+  "icon_theme": "Zed (Default)",
+  "ui_font_family": "PT Mono",
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": "standard",
+  "buffer_font_family": "PT Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "wrap_guides": [100, 150],
+  "experimental.theme_overrides": {
+    "editor.wrap_guide": "#c8ccd440",
+  },
   "relative_line_numbers": "enabled",
+
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null,
+    },
+  },
+
+  "vim_mode": true,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
+
   "file_finder": {
     "modal_max_width": "large",
   },
@@ -30,42 +59,21 @@
   "status_bar": {
     "experimental.show": false,
   },
-  "vim_mode": true,
+  "outline_panel": {
+    "dock": "right",
+  },
+
   "agent_servers": {
     "claude": {
       "default_model": "sonnet",
     },
   },
-  "theme": "Nordfox - blurred",
-  "ui_font_family": "PT Mono",
-  "buffer_font_weight": 400.0,
-  "buffer_line_height": "standard",
-  "buffer_font_family": "PT Mono",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "icon_theme": "Zed (Default)",
-  "autosave": "on_focus_change",
-  "format_on_save": "on",
-  "outline_panel": {
-    "dock": "right",
-  },
-  "diagnostics": {
-    "button": true,
-    "include_warnings": true,
-    "inline": {
-      "enabled": true,
-      "update_debounce_ms": 150,
-      "padding": 4,
-      "min_column": 0,
-      "max_severity": null,
-    },
-  },
+
   "languages": {
     "Go": {
       "language_servers": ["gopls"],
     },
   },
-  "wrap_guides": [100, 150],
   "lsp": {
     "gopls": {
       "initialization_options": {
